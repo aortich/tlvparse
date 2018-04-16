@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="tlvparse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdQ-VP-p5p">
+                                <rect key="frame" x="0.0" y="100" width="375" height="467"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w4Y-qT-Lo4">
+                                        <rect key="frame" x="25" y="20" width="326" height="327"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="tvTLV"/>
+                                        <mutableString key="text">5F201A54444320424C41434B20554E4C494D49544544205649534120204F07A00000000310105F24032307319F160F4243544553542031323334353637389F21031826509A031406179F02060000000000019F03060000000000009F34030203009F120C56495341204352454449544F9F0607A00000000310105F300202019F4E0F616263640000000000000000000000C408491573FFFFFF1097C00A09117101800165E0000AC2820168D9DE289AAD770BE408F6B1D4E0A2576CEA7F03CD479CE3A1827375D6C4D4959ACDB5D3B6F84CD83430F4346C35E48A77A0D5F36FBEA444C2D8701C07FFC7AF06C0485D68F7A83FC30840D3C0766EC4EE669BE5A42BAD4C7459680FAAAE9C4EFEFFEB5A590E53B3E91B3CD28A415C2C9484E26DA5A15592BBCD1F45CF49D27A9D480B031957DF8C790C55FF60DB192CCD070FA4F7BCDC99E7F7567C2F991B5536F9336BA66D68115D54BC3642A9CA47FDD162FCDC33E455AAC283975DACC98CBE9A6611E996F0740072CF8E32D3D9F39F4BB25568F5CC3E7F5DE158E4D62BF4E7185CF13BD068C4F062C26A3BBF88E056F249130E89AA29E52A1EBB6BAD98296822F10949F0C825D1449DA7EF4431AB846D0DDB916F2901359DD9A3B3395BAC9F9BE4D24657F65B030DDADA53577A14D9F5F776B6FF7EAB99D8C4BB08BEF2016C72D94B1DB91BCF0238405B7857646DCE5F79871D96B6A6652090FD8CFCC59973433919A6D0533DFE</mutableString>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" spellCheckingType="no"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfW-Qg-LEV">
+                                        <rect key="frame" x="24" y="368" width="326" height="46.5"/>
+                                        <color key="backgroundColor" red="0.47843137250000001" green="0.78823529410000004" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="parseButton"/>
+                                        <state key="normal" title="Parse!">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pressedParse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uxG-fA-e4U"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RfW-Qg-LEV" firstAttribute="centerX" secondItem="CdQ-VP-p5p" secondAttribute="centerX" id="DTO-OQ-84g"/>
+                                    <constraint firstItem="w4Y-qT-Lo4" firstAttribute="centerX" secondItem="CdQ-VP-p5p" secondAttribute="centerX" id="Elv-XT-hQo"/>
+                                    <constraint firstItem="RfW-Qg-LEV" firstAttribute="top" secondItem="w4Y-qT-Lo4" secondAttribute="bottom" constant="21" id="HUZ-9V-2ao"/>
+                                    <constraint firstItem="w4Y-qT-Lo4" firstAttribute="top" secondItem="CdQ-VP-p5p" secondAttribute="top" constant="20" id="Lk8-Wd-SrX"/>
+                                    <constraint firstItem="w4Y-qT-Lo4" firstAttribute="height" secondItem="CdQ-VP-p5p" secondAttribute="height" multiplier="0.7" id="NnP-zr-bbr"/>
+                                    <constraint firstItem="RfW-Qg-LEV" firstAttribute="width" secondItem="CdQ-VP-p5p" secondAttribute="width" multiplier="0.87" id="S93-4m-Mx2"/>
+                                    <constraint firstItem="w4Y-qT-Lo4" firstAttribute="width" secondItem="CdQ-VP-p5p" secondAttribute="width" multiplier="0.87" id="ZQf-L2-J3a"/>
+                                    <constraint firstItem="RfW-Qg-LEV" firstAttribute="height" secondItem="CdQ-VP-p5p" secondAttribute="height" multiplier="0.1" id="h7l-Iu-yHY"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cool Simple TLV Parsing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQj-FR-tI4">
+                                <rect key="frame" x="-0.5" y="30" width="375" height="66.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.36558424185980398" green="0.36558424185980398" blue="0.36558424185980398" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89095832520935137" green="0.89095832520935137" blue="0.89095832520935137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CQj-FR-tI4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="297-Ni-qXP"/>
+                            <constraint firstItem="CdQ-VP-p5p" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="7zD-2a-tCp"/>
+                            <constraint firstItem="CQj-FR-tI4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ctu-9J-BFA"/>
+                            <constraint firstItem="CQj-FR-tI4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N5i-tS-eqO"/>
+                            <constraint firstItem="CdQ-VP-p5p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jsS-Jg-eNM"/>
+                            <constraint firstItem="CdQ-VP-p5p" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="k1X-ff-N2T"/>
+                            <constraint firstItem="CQj-FR-tI4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="tHz-xK-3a7"/>
+                            <constraint firstItem="CdQ-VP-p5p" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="tOS-LO-7Ij"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnParse" destination="RfW-Qg-LEV" id="2dk-tA-zue"/>
+                        <outlet property="tvString" destination="w4Y-qT-Lo4" id="Nmj-Cx-c9y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="114.69265367316342"/>
+        </scene>
+    </scenes>
+</document>

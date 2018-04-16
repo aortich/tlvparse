@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TLVPopViewController" customModule="tlvparse" customModuleProvider="target">
+            <connections>
+                <outlet property="popupView" destination="xK3-N8-Jkl" id="Nwh-wN-r35"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xK3-N8-Jkl">
+                    <rect key="frame" x="37.5" y="66" width="300" height="534"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VHj-70-PS9">
+                            <rect key="frame" x="-0.5" y="-0.5" width="300" height="534"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="eHf-cT-hqw"/>
+                                <outlet property="delegate" destination="-1" id="21M-YD-Hqw"/>
+                            </connections>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ije-vH-QKy">
+                            <rect key="frame" x="283" y="-10" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ije-vH-QKy" secondAttribute="height" multiplier="1:1" id="r1m-b0-sfE"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="close"/>
+                            <connections>
+                                <action selector="pressedClose:" destination="-1" eventType="touchUpInside" id="zQj-WQ-NGw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="VHj-70-PS9" firstAttribute="centerX" secondItem="xK3-N8-Jkl" secondAttribute="centerX" id="5s5-yQ-lKu"/>
+                        <constraint firstItem="VHj-70-PS9" firstAttribute="height" secondItem="xK3-N8-Jkl" secondAttribute="height" id="FZ8-9l-Hje"/>
+                        <constraint firstItem="ije-vH-QKy" firstAttribute="width" secondItem="xK3-N8-Jkl" secondAttribute="width" multiplier="0.08" id="OB8-YN-Fbl"/>
+                        <constraint firstItem="VHj-70-PS9" firstAttribute="width" secondItem="xK3-N8-Jkl" secondAttribute="width" id="R6w-5C-ES7"/>
+                        <constraint firstAttribute="trailing" secondItem="ije-vH-QKy" secondAttribute="trailing" constant="-6.5" id="RsG-Zl-uGm"/>
+                        <constraint firstItem="VHj-70-PS9" firstAttribute="centerY" secondItem="xK3-N8-Jkl" secondAttribute="centerY" id="bN2-lH-xl4"/>
+                        <constraint firstItem="ije-vH-QKy" firstAttribute="top" secondItem="xK3-N8-Jkl" secondAttribute="top" constant="-10" id="cht-gG-raN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <accessibility key="accessibilityConfiguration" identifier="popupTLV"/>
+            <constraints>
+                <constraint firstItem="xK3-N8-Jkl" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.8" id="8jx-Ru-qGX"/>
+                <constraint firstItem="xK3-N8-Jkl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="NGX-On-L1m"/>
+                <constraint firstItem="xK3-N8-Jkl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WV8-XD-9FQ"/>
+                <constraint firstItem="xK3-N8-Jkl" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.8" id="kAz-Dk-36N"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close" width="20" height="20"/>
+    </resources>
+</document>
