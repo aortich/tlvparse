@@ -67,6 +67,7 @@ class TLVParser: NSObject {
         
         while(bytes.count > 0) {
             guard let b = bytes.first else {
+                bytes.removeFirst()
                 continue
             }
             
