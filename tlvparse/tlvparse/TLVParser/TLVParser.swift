@@ -68,7 +68,7 @@ class TLVParser: NSObject {
         while(bytes.count > 0) {
             guard let b = bytes.first else {
                 //it's probably null anyway
-                return
+                return nil
             }
             
             //get tag
